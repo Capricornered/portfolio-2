@@ -1,0 +1,150 @@
+/*font faces*/
+@font-face {
+    font-family:"cartograph-cf";
+    src:url("https://use.typekit.net/af/a6d442/00000000000000007735fa50/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/a6d442/00000000000000007735fa50/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/a6d442/00000000000000007735fa50/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+    font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}   
+@font-face {
+    font-family:"cartograph-cf";
+    src:url("https://use.typekit.net/af/6a8091/00000000000000007735fa53/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3") format("woff2"),url("https://use.typekit.net/af/6a8091/00000000000000007735fa53/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3") format("woff"),url("https://use.typekit.net/af/6a8091/00000000000000007735fa53/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3") format("opentype");
+    font-display:auto;font-style:normal;font-weight:900;font-stretch:normal;
+}    
+@font-face {
+    font-family:"cartograph-cf";
+    src:url("https://use.typekit.net/af/454b48/00000000000000007735fa56/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/454b48/00000000000000007735fa56/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/454b48/00000000000000007735fa56/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+    font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+/*reset defaults*/
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+/*body*/
+body {
+    background-color: #ff69b4;
+    color: #353535;
+    overflow: hidden;
+}
+/*splash page*/
+#container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+#start {
+    height: 100%;
+    width: 100%;
+}
+@keyframes static {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+#static {
+    background-image: url("images/bg-noise.png");
+    opacity: 0.2;
+    animation: static 0.5s steps(10) infinite;
+    height: 100%;
+    width: 100%;
+}
+#hey a {
+    animation: bounce-in 0.7s;    
+    position: absolute;
+    top: 30%;
+    font-family: cartograph-cf;
+    font-weight: 400;
+    font-size: 8vw;
+    text-shadow: 5px 5px #ff00a6c1;
+    text-align: center;
+    width: 100%;
+    color: #ffe100c1;
+    text-decoration: none;
+}
+@keyframes bounce-in {
+    0% {
+        right: -100%;
+    }
+    75% {
+        right: 3%;
+    }
+    100% {
+        right: 0%;
+    }
+}
+#hey a:hover {
+    transform: scale(1.2);
+    transition: 0.2s;
+    cursor: pointer;
+}
+/*content start*/
+#one {
+    background-color: #ebb4ff;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 100%;
+    overflow: auto;
+}
+#title-container {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    text-align: right;
+    user-select: none;
+}
+#title-one {
+    background-color: #ff62b7;
+    border-right: 1vw solid #ff62b7;
+    font-family: cartograph-cf;
+    font-size: 5em;
+    color: #ffe760;
+    text-shadow: 4px 4px #ff00a682;
+}
+#title-two {
+    background-color: #ff62b7;
+    border-right: 1vw solid #ff62b7;
+    font-family: cartograph-cf;
+    font-size: 5em;
+    color: #ffe760;
+    text-shadow: 4px 4px #ff00a682;
+}
+.box {
+    position: absolute;
+    width: 40%;
+    height: 75%;
+    top: 12%;
+    right: 7%;
+    background-color: #ffffff;
+    border: 3px solid #d562ff;
+}
+.box-header {
+    background-color: #ffe760;
+    position: absolute;
+    width: 100%;
+    height: 4.5vh;
+    padding-left: 1em;
+    box-sizing: border-box;
+    font-family: cartograph-cf;
+    color: #d562ff;
+    border-bottom: 4px solid #d562ff;
+    font-size: 1em;
+}
+.ex {
+    float: right;
+    height: 1.2em;
+    margin-right: .3em;
+    margin-top: .2em;
+    border: 1px solid #d562ff;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 2px #a22fcb;
+}
+.ex:hover {
+    filter: invert(100%);
+    transition: .15s;
+}
