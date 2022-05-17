@@ -47,7 +47,7 @@ body {
     }
 }
 #static {
-    background-image: url("images/bg-noise.png");
+    background-image: url("../images/bg-noise.png");
     opacity: 0.2;
     animation: static 0.5s steps(10) infinite;
     height: 100%;
